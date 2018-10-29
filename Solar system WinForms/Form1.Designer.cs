@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mercuryImage = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -42,7 +43,7 @@
             this.moonImage = new System.Windows.Forms.PictureBox();
             this.phobosImage = new System.Windows.Forms.PictureBox();
             this.deimosImage = new System.Windows.Forms.PictureBox();
-            this.ioImage = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mercuryImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.venusImage)).BeginInit();
@@ -56,7 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.moonImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phobosImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deimosImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ioImage)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -207,7 +207,7 @@
             this.phobosImage.Image = global::Solar_system_WinForms.Properties.Resources.Pluto;
             this.phobosImage.Location = new System.Drawing.Point(522, 248);
             this.phobosImage.Name = "phobosImage";
-            this.phobosImage.Size = new System.Drawing.Size(9, 9);
+            this.phobosImage.Size = new System.Drawing.Size(8, 8);
             this.phobosImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.phobosImage.TabIndex = 12;
             this.phobosImage.TabStop = false;
@@ -216,23 +216,17 @@
             // 
             this.deimosImage.BackColor = System.Drawing.Color.Transparent;
             this.deimosImage.Image = global::Solar_system_WinForms.Properties.Resources.Pluto;
-            this.deimosImage.Location = new System.Drawing.Point(569, 248);
+            this.deimosImage.Location = new System.Drawing.Point(572, 248);
             this.deimosImage.Name = "deimosImage";
-            this.deimosImage.Size = new System.Drawing.Size(9, 9);
+            this.deimosImage.Size = new System.Drawing.Size(7, 7);
             this.deimosImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.deimosImage.TabIndex = 13;
             this.deimosImage.TabStop = false;
             // 
-            // ioImage
+            // timer1
             // 
-            this.ioImage.BackColor = System.Drawing.Color.Transparent;
-            this.ioImage.Image = global::Solar_system_WinForms.Properties.Resources.Pluto;
-            this.ioImage.Location = new System.Drawing.Point(514, 191);
-            this.ioImage.Name = "ioImage";
-            this.ioImage.Size = new System.Drawing.Size(9, 9);
-            this.ioImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ioImage.TabIndex = 14;
-            this.ioImage.TabStop = false;
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -240,7 +234,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Solar_system_WinForms.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1064, 741);
-            this.Controls.Add(this.ioImage);
             this.Controls.Add(this.deimosImage);
             this.Controls.Add(this.phobosImage);
             this.Controls.Add(this.moonImage);
@@ -271,7 +264,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.moonImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phobosImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deimosImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ioImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -292,7 +284,7 @@
         private System.Windows.Forms.PictureBox moonImage;
         private System.Windows.Forms.PictureBox phobosImage;
         private System.Windows.Forms.PictureBox deimosImage;
-        private System.Windows.Forms.PictureBox ioImage;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
